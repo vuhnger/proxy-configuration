@@ -1,8 +1,23 @@
 n8n.vuhnger.dev {
+    rate_limit {
+        zone general {
+            key {remote_host}
+            events 30
+            window 1m
+        }
+    }
     reverse_proxy 127.0.0.1:5678
 }
 
 api.vuhnger.dev {
+    rate_limit {
+        zone general {
+            key {remote_host}
+            events 20
+            window 1m
+        }
+    }
+
     # Serve uploaded images
     handle /uploads/* {
         root * /home/rocky
