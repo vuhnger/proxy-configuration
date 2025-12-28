@@ -2,7 +2,7 @@ n8n.vuhnger.dev {
     rate_limit {
         zone general {
             key {remote_host}
-            events 30
+            events 60
             window 1m
         }
     }
@@ -13,7 +13,7 @@ api.vuhnger.dev {
     rate_limit {
         zone general {
             key {remote_host}
-            events 20
+            events 60
             window 1m
         }
     }
